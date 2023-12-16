@@ -1,0 +1,12 @@
+services:
+  app:
+    environment:
+      APPLICATION_ENV: development
+    ports:
+      - 8080:80
+    expose:
+      - 8080
+
+  adminer:
+    ports:
+      - 8081:8080

@@ -1,0 +1,31 @@
+version: '3'
+services:
+  app:
+    image: registry.gitlab.nms.cz/nms/docker:php-8.1-dev
+    volumes:
+      - ./:/var/www/html
+      - ./.docker/apache/sites-available:/etc/apache2/sites-available
+      - ./.docker/php/conf.d/custom.ini:/usr/local/etc/php/conf.d/custom.php.ini
+      - ./.docker/php/conf.d/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+      - ./.docker/php/conf.d/error_reporting.ini:/usr/local/etc/php/conf.d/error_reporting.ini
+    links:
+      - db
+
+
+  adminer:
+    image: michalhosna/adminer
+
+
+  db:
+    image: mysql:5.7.36
+    volumes:
+      - ./.docker/database:/docker-entrypoint-initdb.d:cached,ro
+    command:
+      - --explicit_defaults_for_timestamp
+    healthcheck:
+      # Healthcheck overall time ~2h
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-ppass"]
+      start_period: 15s
+      interval: 30s
+      retries: 240
+      timeout: 5s
