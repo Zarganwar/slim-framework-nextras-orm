@@ -4,7 +4,7 @@ This extension is compatible (with some small modifications) for all Frameworks 
 
 ### Links
 - [Slim Framework](https://www.slimframework.com/)
-- [Nextras ORM (Documentation](https://github.com/nextras/orm)
+- [Nextras ORM (Documentation)](https://github.com/nextras/orm)
 - [Nextras ORM (Github)](https://nextras.org/orm/docs/main/)
 
 ### How to
