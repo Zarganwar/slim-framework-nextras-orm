@@ -13,4 +13,4 @@ This extension is compatible (with some small modifications) for all Frameworks 
 - Extension classes src/Libraries/NextrasOrm/SlimDI
 - Configuration of Extension Config app/settings.php
 - Registration of extensions app/extensions.php
-- Registration of Extensions loader public/index.php `$container->get(\App\Libraries\Extensions\ExtensionLoader::class)->load();`
+- Registration of ExtensionLoader public/index.php `$container->get(\App\Libraries\Extensions\ExtensionLoader::class)->load();`
