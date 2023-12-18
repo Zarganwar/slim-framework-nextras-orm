@@ -9,7 +9,7 @@ This extension is compatible (with some small modifications) for all Frameworks 
 
 ### How to
 
-- Extension handling src/Libraries/Extensions Bt is not required, you can manage extensions as you wish
+- Simple extensions handling src/Libraries/Extensions But is not required, you can manage extensions as you wish
 - Extension classes src/Libraries/NextrasOrm/SlimDI
 - Configuration of Extension Config app/settings.php
 - Registration of extensions app/extensions.php
