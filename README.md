@@ -1,5 +1,7 @@
 ## Simple Nextras ORM extension (loader) for Slim Framework  
 
+This extension is compatible (with some small modifications) for all Frameworks (or DI) compatible with [Psr\Container\ContainerInterface PSR-11](https://www.php-fig.org/psr/psr-11/)
+
 ### Links
 - [Slim Framework](https://www.slimframework.com/)
 - [Nextras ORM (Documentation](https://github.com/nextras/orm)
